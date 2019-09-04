@@ -1,0 +1,12 @@
+(
+    axes: {},
+    actions: {
+        MoveLeft:    [ [Key(Left)], [Key(A)] ],
+        MoveRight:   [ [Key(Right)], [Key(D)] ],
+        MoveUp:      [ [Key(Up)], [Key(W)] ],
+        MoveDown:    [ [Key(Down)], [Key(S)] ],
+
+        ZoomIn:      [ [Key(Period)], ],
+        ZoomOut:     [ [Key(Comma)], ],
+    },
+)

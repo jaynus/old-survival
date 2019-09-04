@@ -1,0 +1,42 @@
+[package]
+name = "pathfinding"
+description = "Pathfinding, flow, and graph algorithms"
+repository = "https://github.com/samueltardieu/pathfinding"
+keywords = ["shortest-path", "astar", "dijkstra", "flow", "graph"]
+license = "Apache-2.0/MIT"
+homepage = "https://rfc1149.net/devel/pathfinding.html"
+documentation = "https://docs.rs/pathfinding/"
+version = "2.0.0-pre"
+authors = ["Samuel Tardieu <sam@rfc1149.net>"]
+categories = ["algorithms"]
+readme = "README.md"
+edition = "2018"
+
+[dependencies]
+fixedbitset = "0.1.9"
+itertools = "0.8.0"
+num-traits = "0.2.6"
+indexmap = "1.0.2"
+
+[dev-dependencies]
+criterion = "0.2.10"
+lazy_static = "1.2.0"
+movingai = "0.8.0"
+noisy_float = "0.1.9"
+rand = "0.6.5"
+rand_xorshift = "0.1.1"
+
+[[bench]]
+name = "algos"
+harness = false
+
+[[bench]]
+name = "algos-fill"
+harness = false
+
+[[bench]]
+name = "movingai"
+harness = false
+
+[badges]
+travis-ci = { repository = "samueltardieu/pathfinding" }

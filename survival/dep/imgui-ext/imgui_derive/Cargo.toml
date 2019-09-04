@@ -1,0 +1,19 @@
+[package]
+name = "imgui-ext-derive"
+version = "0.1.8"
+authors = ["german gomez <germangb42@gmail.com>"]
+edition = "2018"
+description = "Procedural macro for the imgui-ext crate."
+repository = "https://github.com/germangb/imgui-ext"
+keywords = ["gui", "imgui", "macro"]
+categories = ["gui", "api-bindings", "game-engines"]
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = {version = "0.15.18", features = ["derive"]}
+quote = "0.6.9"
+proc-macro2 = "0.4.20"
+failure = "0.1.5"

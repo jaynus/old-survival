@@ -1,0 +1,58 @@
+[
+    (
+        catagory: Cleaning,
+        event: (Wait, None),
+        name: "Boil Food",
+        adjective: "",
+        source: Pawn,
+        base_time: 0,
+        conditions: [
+            (Is, Near(1), Property(Edible)),
+            (Is, Near(1), Property(Cooking(5))),
+            (Is, Near(1), Material(material:"Water",count:1,)),
+        ],
+        result: [
+        ],
+    ),
+    (
+        catagory: Cleaning,
+        event: (Pickup, Some((Is, Near(1), Property(Chopping(1))))),
+        name: "Get Axe",
+        adjective: "",
+        source: Pawn,
+        base_time: 0,
+        conditions: [
+            (Is, Near(1), Property(Chopping(1))),
+        ],
+        result: [
+            ((Is, Has, Property(Chopping(1))), true),
+        ],
+    ),
+    (
+        catagory: Cleaning,
+        event: (Wait, None),
+        name: "Chop Tree",
+        adjective: "",
+        source: Pawn,
+        base_time: 0,
+        conditions: [
+            (Is, Has, Property(Chopping(1))),
+            (Is, Near(1), Tree),
+        ],
+        result: [
+        ],
+    ),
+    (
+        catagory: Cleaning,
+        event: (Wait, None),
+        name: "Move To Tree",
+        adjective: "",
+        source: Pawn,
+        base_time: 0,
+        conditions: [
+        ],
+        result: [
+            ((Is, Near(1), Tree), true),
+        ],
+    ),
+]

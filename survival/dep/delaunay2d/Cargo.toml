@@ -1,0 +1,10 @@
+[package]
+name = "delaunay2d"
+version = "0.0.1"
+authors = ["Mark Sherry <mdsherry@gmail.com>"]
+description = "A library to compute Delaunay triangulations and Voronoi diagrams in 2D space"
+repository = "https://github.com/mdsherry/delaunay2d"
+keywords = ["delaunay", "voronoi"]
+readme = "README.md"
+license = "MIT"
+[dependencies]

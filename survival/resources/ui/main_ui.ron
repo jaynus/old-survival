@@ -1,0 +1,61 @@
+#![enable(implicit_some)]
+Container(
+    transform: (
+        id: "background",
+        anchor: Middle,
+        stretch: XY( x_margin: 0., y_margin: 0., keep_aspect_ratio: true),
+        transparent: true,
+    ),
+    children: [
+        Label(
+            transform: (
+                id: "fps",
+                x: 100.,
+                y: -16,
+                width: 200.,
+                height: 768.,
+                tab_order: 2,
+                anchor: TopLeft,
+                transparent: true,
+            ),
+            text: (
+                text: "N/A",
+                font: File("fonts/ProggySquare.ttf", Ttf, ()),
+                font_size: 25.,
+                align: TopLeft,
+                color: (0.498, 0.254, 0.937, 1.0),
+            )
+        ),
+        Container(
+            transform: (
+                id: "right_bar",
+                width: 500.,
+                height: 2048.,
+                anchor: TopRight,
+            ),
+            background: (
+                image: Data(Rgba((0., 0., 0., 1.0), (channel: Srgb))),
+            ),
+            children: [
+                Label(
+                    transform: (
+                        id: "multiline",
+                        x: 0.,
+                        y: -512.,
+                        width: 500.,
+                        height: 1024.,
+                        anchor: Middle,
+                    ),
+                    text: (
+                        text: "Multiline\nAAAA!\nasdf\nasdf\nasdf\nballs\n123\nballs\nballs\nballs\nballs\nballs\nballs\nballs\nballs\nballs\nballs",
+                        font: File("fonts/ProggySquare.ttf", Ttf, ()),
+                        font_size: 10.,
+                        color: (0.2, 0.2, 1.0, 1.0),
+                        line_mode: Wrap,
+                        align: TopLeft,
+                    )
+                ),
+            ]
+        ),
+    ],
+)

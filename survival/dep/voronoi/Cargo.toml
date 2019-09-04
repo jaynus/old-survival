@@ -1,0 +1,33 @@
+[package]
+
+name = "voronoi"
+version = "0.1.4"
+documentation = "https://docs.rs/voronoi/0.1.4/voronoi/"
+authors = [ "Will Turner <rwturner17@gmail.com>" ]
+description = "A library to compute Voronoi diagrams, using Fortune's sweepline algorithm"
+repository = "https://github.com/petosegan/rust_voronoi"
+keywords = ["voronoi", "geometry"]
+readme = "Readme.md"
+license = "MIT"
+edition = "2018"
+
+[dependencies]
+log = "0.4.6"
+fnv = "1.0"
+serde = { version = "1.0", optional = true }
+serde_derive = { version = "1.0", optional = true }
+rayon = { version = "1.0" }
+
+[target.'cfg(not(features="serde_derive"))'.dependencies.ordered-float]
+version = "1.0"
+
+[target.'cfg(features="serde_derive")'.dependencies.ordered-float]
+version = "1.0"
+features = ["serde"]
+
+[dev-dependencies]
+serde_test = "1.0"
+rand = "0.6"
+
+[features]
+serde_support = ["serde", "serde_derive"]
